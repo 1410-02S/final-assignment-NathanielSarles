@@ -332,6 +332,7 @@ public class Main {
                 cont = false;
                 break;
                 case "R":
+                temp = 0;
                 System.out.println("Please input the coordinates "
                 + "of the region you want to look at starting in"
                 + " format row column.(ie 11 would be the top left"
@@ -367,6 +368,10 @@ public class Main {
                     } else {
                         y = temp;
                     }
+                }
+                if (test.map.length <= x || test.map[0].length <= y){
+                    temp = -1;
+                    System.out.println("Invalid Input.");
                 }
                 if (temp != -1){
                     t = test.map[x][y];
